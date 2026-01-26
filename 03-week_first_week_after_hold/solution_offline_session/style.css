@@ -189,3 +189,50 @@ header .btns button:last-child:hover {
 .hero .content .input-btn button:hover {
   background-color: rgb(0, 0, 0, 0.8);
 }
+
+.everything {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.everything span {
+  font-size: var(--font-size-sm);
+  color: var(--color-black);
+}
+
+.everything h2 {
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+}
+
+.everything .cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.everything .cards .card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.everything .cards .card img {
+  width: 75px;
+  aspect-ratio: 1/1;
+}
+
+.everything .cards .card h4 {
+  font-size: var(--font-size-lg);
+}
+
+.everything .cards .card p {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray);
+}

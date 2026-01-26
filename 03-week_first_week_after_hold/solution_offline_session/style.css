@@ -141,7 +141,7 @@ footer .content {
 
 .hero .content h1,
 footer .content h1 {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
   font-weight: bold;
   line-height: 1.1;
 }

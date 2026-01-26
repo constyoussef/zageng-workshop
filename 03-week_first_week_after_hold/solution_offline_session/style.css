@@ -35,22 +35,18 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
-}
-
-@media (max-width: 1200px) {
-  .container {
-    width: 100%;
-  }
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 90px;
+  height: 60px;
   border-radius: 70px;
   background-color: var(--color-gray-2);
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
@@ -61,7 +57,7 @@ header .logo img {
 }
 
 header nav {
-  display: flex;
+  display: none;
   justify-content: space-evenly;
   align-items: center;
   gap: 16px;
@@ -116,6 +112,8 @@ header .btns button:last-child:hover {
 footer {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  padding: 20px 0;
   align-items: center;
   background-image: linear-gradient(
     to right,
@@ -127,9 +125,11 @@ footer {
 
 .hero .content,
 footer .content {
-  width: 50%;
+  width: 80%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 12px;
 }
 
@@ -141,7 +141,7 @@ footer .content {
 
 .hero .content h1,
 footer .content h1 {
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-2xl);
   font-weight: bold;
   line-height: 1.1;
 }
@@ -154,7 +154,7 @@ footer .content p {
 
 .hero .image,
 footer .image {
-  width: 50%;
+  width: 100%;
 }
 
 .hero .image img,
@@ -173,10 +173,11 @@ footer .content .input-btn {
 .hero .content .input-btn input,
 footer .content .input-btn input {
   width: 100%;
-  height: 60px;
+  height: 30px;
   border-radius: 40px;
   border: none;
   padding: 0 20px;
+  font-size: var(--font-size-sm);
 }
 
 .hero .content .input-btn button,
@@ -185,12 +186,12 @@ footer .content .input-btn button {
   right: 0;
   top: 0;
   height: 100%;
-  width: 150px;
+  width: 80px;
   border-radius: 40px;
   border: none;
   background-color: var(--color-black);
   color: var(--color-white);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -216,22 +217,26 @@ footer .content .input-btn button:hover {
 }
 
 .everything h2 {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   font-weight: bold;
+  text-align: center;
 }
 
 .everything .cards {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .everything .cards .card {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .everything .cards .card img {
@@ -246,6 +251,8 @@ footer .content .input-btn button:hover {
 .everything .cards .card p {
   font-size: var(--font-size-sm);
   color: var(--color-gray);
+  width: 70%;
+  text-align: center;
 }
 
 .our {
@@ -267,8 +274,8 @@ footer .content .input-btn button:hover {
 
 .our .btns button {
   border: none;
-  width: 45px;
-  height: 45px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -286,7 +293,7 @@ footer .content .input-btn button:hover {
 }
 
 .our .btns button svg {
-  width: 22px;
+  width: 16px;
 }
 
 .our .btns button[data-active] svg {
@@ -299,7 +306,7 @@ footer .content .input-btn button:hover {
 }
 
 .our h2 {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
   font-weight: bold;
 }
 
@@ -307,6 +314,7 @@ footer .content .input-btn button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -317,6 +325,7 @@ footer .content .input-btn button:hover {
   border-radius: 12px;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
+  width: 100%;
 }
 
 .our .cards .card:hover {
@@ -363,29 +372,30 @@ footer .content .input-btn button:hover {
 }
 
 .global h2 {
-  font-size: var(--font-size-3xl);
+  font-size: var(--font-size-xl);
   font-weight: bold;
   text-align: center;
 }
 
 .global .content {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: start;
   gap: 32px;
 }
 
 .global .left {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  max-width: 40%;
   gap: 16px;
 }
 
 .global .left h4 {
   font-size: var(--font-size-2xl);
   font-weight: 500;
+  text-align: center;
   line-height: 1.2;
 }
 
@@ -397,6 +407,8 @@ footer .content .input-btn button:hover {
 
 .global .left .btns {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -429,8 +441,8 @@ footer .content .input-btn button:hover {
 
 .global .left .numbers {
   display: flex;
-  justify-content: space-between;
-  gap: 4px;
+  justify-content: center;
+  gap: 16px;
 }
 
 .global .left .numbers div {
@@ -440,7 +452,7 @@ footer .content .input-btn button:hover {
 }
 
 .global .left .numbers span:first-of-type {
-  font-size: var(--font-size-4xl);
+  font-size: var(--font-size-2xl);
   font-weight: 600;
   line-height: 1.2;
 }
@@ -451,9 +463,127 @@ footer .content .input-btn button:hover {
 }
 
 .global .right {
-  width: 50%;
+  width: 100%;
 }
 
 .global img {
   width: 100%;
+}
+
+/* Media Query */
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .everything .cards .card,
+  .our .cards .card {
+    width: calc(50% - 20px);
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .header {
+    height: 90px;
+  }
+  header nav {
+    display: flex;
+  }
+
+  .everything h2 {
+    text-align: start;
+    font-size: var(--font-size-xl);
+  }
+
+  .global .left .numbers span:first-of-type {
+    font-size: var(--font-size-3xl);
+  }
+
+  .global .left h4 {
+    text-align: left;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .hero,
+  footer {
+    flex-direction: row;
+  }
+
+  .hero .content h1,
+  footer .content h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero .content .input-btn input,
+  footer .content .input-btn input {
+    height: 60px;
+    font-size: var(--font-size-base);
+  }
+
+  .hero .content .input-btn button,
+  footer .content .input-btn button {
+    width: 150px;
+    font-size: var(--font-size-sm);
+  }
+
+  .hero .content,
+  footer .content {
+    width: 50%;
+  }
+
+  .hero .image,
+  footer .image {
+    width: 50%;
+  }
+
+  .everything .cards .card,
+  .our .cards .card {
+    width: calc(33% - 20px);
+  }
+
+  .our .btns button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .our .btns button svg {
+    width: 22px;
+  }
+
+  .our .btns button[data-active] svg {
+    color: var(--color-white);
+  }
+
+  .global .content {
+    flex-direction: row;
+  }
+
+  .global h2 {
+    font-size: var(--font-size-4xl);
+  }
+
+  .global .left {
+    width: 50%;
+  }
+  .global .right {
+    width: 50%;
+  }
+
+  .global .left .numbers span:first-of-type {
+    font-size: var(--font-size-4xl);
+  }
+
+  .global .left .btns {
+    align-items: start;
+    justify-content: start;
+  }
+
+  .global .left .numbers {
+    justify-content: space-between;
+    gap: 4px;
+  }
+
+  .global .right {
+    width: 50%;
+  }
 }

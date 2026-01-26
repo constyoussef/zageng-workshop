@@ -1,0 +1,109 @@
+:root {
+  /* Colors */
+  --color-primary: #c1dee8;
+  --color-secondary: #fbd9b9;
+  --color-black: #000000;
+  --color-text-heading: #1f1f1f;
+  --color-gray: #bebebe;
+  --color-gray-2: #fafafa;
+  --color-white: #ffffff;
+
+  /* Typography */
+  --font-size-xs: 9px;
+  --font-size-sm: 12px;
+  --font-size-base: 16px;
+  --font-size-lg: 21px;
+  --font-size-xl: 28px;
+  --font-size-2xl: 38px;
+  --font-size-3xl: 50px;
+  --font-size-4xl: 67px;
+  --font-size-5xl: 89px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  border-radius: 70px;
+  background-color: var(--color-gray-2);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+  width: 100px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--color-white);
+  height: 50px;
+  padding: 5px 20px;
+  border-radius: 40px;
+  box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--color-text-heading);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  text-wrap: nowrap;
+  transition: all 0.3s ease-in-out;
+}
+
+header nav a:hover {
+  color: var(--color-primary);
+}
+
+header .btns {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+header .btns button {
+  background: none;
+  border: none;
+  font-size: var(--font-size-sm);
+}
+
+header .btns button:last-child {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray);
+  padding: 15px 24px;
+  border-radius: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+header .btns button:last-child:hover {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: var(--color-white);
+  cursor: pointer;
+}

@@ -244,6 +244,45 @@ header .btns button:last-child:hover {
   gap: 16px;
 }
 
+.our .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.our .btns {
+  display: flex;
+  gap: 8px;
+}
+
+.our .btns button {
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.our .btns button[data-active] {
+  background-color: var(--color-black);
+}
+
+.our .btns button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.our .btns button svg {
+  width: 22px;
+}
+
+.our .btns button[data-active] svg {
+  color: var(--color-white);
+}
+
 .our span {
   font-size: var(--font-size-sm);
   font-weight: 300;

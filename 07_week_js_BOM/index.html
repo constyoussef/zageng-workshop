@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Profile - Jason Haag</title>
+    <style>
+      :root {
+        --primary: #2c3e50;
+        --accent: #3498db;
+        --text: #333;
+        --light-bg: #f4f7f6;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--light-bg);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .book-container {
+        background: white;
+        width: 90%;
+        max-width: 450px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .book-container:hover {
+        transform: translateY(-5px);
+      }
+
+      .image-header {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-bottom: 4px solid var(--accent);
+      }
+
+      .content {
+        padding: 24px;
+      }
+
+      .genre-tag {
+        display: inline-block;
+        background: var(--accent);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+
+      .title {
+        margin: 0 0 8px 0;
+        font-size: 1.6rem;
+        color: var(--primary);
+        line-height: 1.2;
+      }
+
+      .author {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .description {
+        font-size: 0.95rem;
+        color: #555;
+        line-height: 1.6;
+        background: #fdfdfd;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px italic #eee;
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      .description::before {
+        content: '"';
+        font-family: serif;
+        font-size: 3rem;
+        color: rgba(52, 152, 219, 0.2);
+        position: absolute;
+        top: -10px;
+        left: 5px;
+      }
+
+      .footer-meta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+        font-size: 0.85rem;
+        color: #888;
+      }
+
+      .meta-item b {
+        display: block;
+        color: var(--primary);
+        margin-bottom: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="main.js"></script>
+  </body>
+</html>

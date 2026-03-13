@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React (Native Way)</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // Header
+      const headerTitle = React.createElement("h1", {}, "My Raw React App");
+
+      const navHome = React.createElement("a", { href: "#" }, "Home");
+      const navAbout = React.createElement("a", { href: "#" }, "About");
+      const navContact = React.createElement("a", { href: "#" }, "Contact");
+
+      const navBar = React.createElement(
+        "nav",
+        {
+          style: {
+            display: "flex",
+            gap: "15px",
+            marginBottom: "20px",
+          },
+        },
+        navHome,
+        navAbout,
+        navContact,
+      );
+
+      const header = React.createElement(
+        "header",
+        {
+          style: {
+            background: "#eee",
+            padding: "20px",
+          },
+        },
+        headerTitle,
+        navBar,
+      );
+
+      // Card component function
+      function createCard(title, description) {
+        const cardTitle = React.createElement("h3", {}, title);
+
+        const cardDesc = React.createElement("p", {}, description);
+
+        const button = React.createElement(
+          //
+          "button",
+          {
+            onClick: () => alert(title + " clicked"),
+            style: { marginTop: "10px" },
+          },
+          "Learn More",
+        );
+
+        return React.createElement(
+          "div",
+          {
+            style: {
+              border: "1px solid #ccc",
+              padding: "15px",
+              width: "200px",
+              borderRadius: "8px",
+            },
+          },
+          cardTitle,
+          cardDesc,
+          button,
+        );
+      }
+
+      // Cards
+      const card1 = createCard("React", "JavaScript UI Library");
+      const card2 = createCard("Node.js", "JavaScript Backend Runtime");
+      const card3 = createCard("MongoDB", "NoSQL Database");
+
+      const cardsSection = React.createElement(
+        "div",
+        {
+          style: {
+            display: "flex",
+            gap: "20px",
+            marginTop: "20px",
+          },
+        },
+        card1,
+        card2,
+        card3,
+      );
+
+      // Footer
+      const footerText = React.createElement(
+        "p",
+        {},
+        "© 2026 My Raw React App",
+      );
+
+      const footer = React.createElement(
+        "footer",
+        {
+          style: {
+            marginTop: "40px",
+            padding: "20px",
+            background: "#eee",
+            textAlign: "center",
+          },
+        },
+        footerText,
+      );
+
+      // Main App
+      const app = React.createElement(
+        "div",
+        {
+          style: {
+            fontFamily: "Arial",
+            padding: "20px",
+          },
+        },
+        header,
+        cardsSection,
+        footer,
+      );
+
+      // Render
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(app);
+    </script>
+  </body>
+</html>

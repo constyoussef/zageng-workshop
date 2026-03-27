@@ -1,6 +1,10 @@
-
+import { Comment } from "./components/Comment";
 
 export default function App() {
-  return <h1>Hello from App</h1>
+  const auther = {
+    avatarUrl: "hljlkdjfa",
+    name: "User",
+    description: "test",
+  };
+  return <Comment auther={auther} />;
 }
-
